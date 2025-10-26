@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spark Edition - Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Crimson+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2D3748;
+            --accent: #E53E3E;
+            --text: #4A5568;
+            --light-bg: #F7FAFC;
+            --border: #E2E8F0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: #fff;
+        }
+        
+        header {
+            border-bottom: 1px solid var(--border);
+            padding: 2rem 1rem;
+            text-align: center;
+            background: var(--light-bg);
+        }
+        
+        .site-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .site-description {
+            color: var(--text);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+        
+        .archive-intro {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .archive-intro h2 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .editions-list {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .edition-card {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: box-shadow 0.2s;
+            background: #fff;
+        }
+        
+        .edition-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .edition-header {
+            padding: 1.5rem;
+            background: var(--light-bg);
+        }
+        
+        .edition-number {
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .edition-date {
+            font-size: 0.9rem;
+            color: var(--text);
+            margin-top: 0.25rem;
+        }
+        
+        .edition-content {
+            padding: 1.5rem;
+        }
+        
+        .edition-intro {
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            line-height: 1.7;
+        }
+        
+        .curated-items {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .item {
+            display: flex;
+            gap: 1rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .item-image {
+            flex-shrink: 0;
+            width: 100px;
+            height: 100px;
+            border-radius: 4px;
+            object-fit: cover;
+            background: var(--light-bg);
+        }
+        
+        .item-content {
+            flex: 1;
+        }
+        
+        .item-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .item-description {
+            font-size: 0.95rem;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        
+        .item-link {
+            display: inline-block;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .item-link:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2rem 1rem;
+            text-align: center;
+            color: var(--text);
+            font-size: 0.9rem;
+            margin-top: 4rem;
+        }
+        
+        @media (max-width: 640px) {
+            .site-title {
+                font-size: 2rem;
+            }
+            
+            .item {
+                flex-direction: column;
+            }
+            
+            .item-image {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="site-title">Spark Edition</h1>
+        <p class="site-description">A fortnightly newsletter of curated articles, clever tools and fun links for the curious</p>
+    </header>
+
+    <div class="container">
+        <div class="archive-intro">
+            <h2>Archive</h2>
+            <p>Welcome to the Spark Edition archive. From 2018 to 2020, I sent out a fortnightly newsletter sharing the most interesting things I found online - thoughtful articles, clever tools, and creative inspiration for curious minds.</p>
+        </div>
+
+        <div class="editions-list">
+            <!-- EDITION TEMPLATE - COPY THIS BLOCK FOR EACH EDITION -->
+            <article class="edition-card">
+                <div class="edition-header">
+                    <div class="edition-number">Edition #42</div>
+                    <div class="edition-date">15th March 2020</div>
+                </div>
+                <div class="edition-content">
+                    <p class="edition-intro">
+                        This week I've found some brilliant resources for remote working, a fascinating documentary about memory, and a tool that makes email writing less stressful.
+                    </p>
+                    
+                    <div class="curated-items">
+                        <!-- ITEM TEMPLATE - COPY FOR EACH CURATED LINK -->
+                        <div class="item">
+                            <img src="https://via.placeholder.com/100" alt="" class="item-image">
+                            <div class="item-content">
+                                <h3 class="item-title">The Best Timer for Focused Work</h3>
+                                <p class="item-description">This site is a really easy and simple timer, just click the times you want. Great for time blocking and keeping you focused on one task.</p>
+                                <a href="#" class="item-link">Visit site →</a>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="https://via.placeholder.com/100" alt="" class="item-image">
+                            <div class="item-content">
+                                <h3 class="item-title">How to Write Tricky Emails</h3>
+                                <p class="item-description">Ever struggled with how to word a tricky email or message? This website helps compose communications in a professional way.</p>
+                                <a href="#" class="item-link">Visit site →</a>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="https://via.placeholder.com/100" alt="" class="item-image">
+                            <div class="item-content">
+                                <h3 class="item-title">Stop Motion Laundry Animation</h3>
+                                <p class="item-description">A cool and clever stop motion animation using a pile of laundry! Really creative technique and brilliantly executed.</p>
+                                <a href="#" class="item-link">Watch video →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ADD MORE EDITIONS HERE -->
+            <article class="edition-card">
+                <div class="edition-header">
+                    <div class="edition-number">Edition #41</div>
+                    <div class="edition-date">1st March 2020</div>
+                </div>
+                <div class="edition-content">
+                    <p class="edition-intro">
+                        Spring is coming and with it some fresh inspiration. This edition features creative projects, productivity tools, and some wonderfully weird internet finds.
+                    </p>
+                    
+                    <div class="curated-items">
+                        <div class="item">
+                            <img src="https://via.placeholder.com/100" alt="" class="item-image">
+                            <div class="item-content">
+                                <h3 class="item-title">Example Link Title</h3>
+                                <p class="item-description">Description of what this link is about and why it's interesting or useful.</p>
+                                <a href="#" class="item-link">Visit site →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>Spark Edition was curated by Ruth Carrick-Forrester • 2018-2020</p>
+        <p style="margin-top: 0.5rem;"><a href="https://ruthcf.com" style="color: var(--accent); text-decoration: none;">Visit my portfolio →</a></p>
+    </footer>
+</body>
+</html>
